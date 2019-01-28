@@ -41,18 +41,20 @@ module.exports = function(RED) {
     function AmazonS3InNode(n) {
         RED.nodes.createNode(this,n);
         this.awsConfig = RED.nodes.getNode(n.aws);
+        node.warn(awsConfig);
         // eu-west-1||us-east-1||us-west-1||us-west-2||eu-central-1||ap-northeast-1||ap-northeast-2||ap-southeast-1||ap-southeast-2||sa-east-1
         this.region = n.region || "eu-west-1";
         this.bucket = n.bucket;
         this.filepattern = n.filepattern || "";
         var node = this;
         var AWS = this.awsConfig ? this.awsConfig.AWS : null;
-
+        node.warn(AWS);
         if (!AWS) {
             //node.warn(RED._("aws.warn.missing-credentials"));
             //return;
         }
         var s3 = new AWS.S3({"region": node.region});
+        node.warn(s3);
         node.status({fill:"blue",shape:"dot",text:"aws.status.initializing"});
         s3.listObjects({ Bucket: node.bucket }, function(err, data) {
             if (err) {
