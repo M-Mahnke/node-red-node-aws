@@ -1,5 +1,5 @@
 {
-    "name"          : "node-red-node-aws",
+    "name"          : "node-red-node-aws-no-cred",
     "version"       : "0.1.4",
     "description"   : "A Node-RED node to watch, save and retreive files from an Amazon S3 bucket",
     "dependencies"  : {
