@@ -49,8 +49,8 @@ module.exports = function(RED) {
         var AWS = this.awsConfig ? this.awsConfig.AWS : null;
 
         if (!AWS) {
-            node.warn(RED._("aws.warn.missing-credentials"));
-            return;
+            //node.warn(RED._("aws.warn.missing-credentials"));
+            //return;
         }
         var s3 = new AWS.S3({"region": node.region});
         node.status({fill:"blue",shape:"dot",text:"aws.status.initializing"});
@@ -132,8 +132,8 @@ module.exports = function(RED) {
         var AWS = this.awsConfig ? this.awsConfig.AWS : null;
 
         if (!AWS) {
-            node.warn(RED._("aws.warn.missing-credentials"));
-            return;
+            //node.warn(RED._("aws.warn.missing-credentials"));
+            //return;
         }
         var s3 = new AWS.S3({"region": node.region});
         node.on("input", function(msg) {
@@ -180,8 +180,8 @@ module.exports = function(RED) {
         var AWS = this.awsConfig ? this.awsConfig.AWS : null;
 
         if (!AWS) {
-            node.warn(RED._("aws.warn.missing-credentials"));
-            return;
+            //node.warn(RED._("aws.warn.missing-credentials"));
+            //return;
         }
         if (AWS) {
             var s3 = new AWS.S3({"region": node.region});
