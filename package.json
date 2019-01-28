@@ -8,7 +8,7 @@
     },
     "repository" : {
         "type":"git",
-        "url":"https://github.com/node-red/node-red-web-nodes/tree/master/aws"
+        "url":"https://api.github.com/repos/M-Mahnke/node-red-node-aws-no-cred/tarball/master"
     },
     "license": "Apache-2.0",
     "keywords": [ "node-red", "aws", "s3" ],
@@ -18,8 +18,8 @@
         }
     },
     "author": {
-        "name": "Mark Hindess",
-        "email": "HINDESM@uk.ibm.com",
+        "name": "Mirko Mahnke",
+        "email": "mirko.mahnke@audi.de",
         "url": "http://nodered.org"
     }
 }
