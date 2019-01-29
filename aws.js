@@ -46,10 +46,12 @@ module.exports = function(RED) {
         var node = this;
         var AWS = this.awsConfig ? this.awsConfig.AWS : null;
         if (!AWS) {
-            //node.warn(RED._("aws.warn.missing-credentials"));
+            node.warn(RED._("aws.warn.missing-credentials"));
             //return;
         }
+        console.log("create s3");
         var s3 = new AWS.S3({"region": node.region});
+        console.log("set status init");
         node.status({fill:"blue",shape:"dot",text:"aws.status.initializing"});
         s3.listObjects({ Bucket: node.bucket }, function(err, data) {
             if (err) {
