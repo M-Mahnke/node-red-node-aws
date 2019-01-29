@@ -2,8 +2,8 @@
 ### This is a fork of https://github.com/node-red/node-red-web-nodes/aws
 
 
-node-red-node-aws
-=================
+node-red-node-aws-no-cred
+=========================
 
 A <a href="http://nodered.org" target="_new">Node-RED</a> node to watch, send
 and receive files from an Amazon S3 bucket.
